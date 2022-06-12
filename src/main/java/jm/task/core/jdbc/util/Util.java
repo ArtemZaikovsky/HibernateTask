@@ -50,15 +50,4 @@ public class Util {
         }
         return sessionFactory;
     }
-
-    public Connection getConnection(){
-        Connection connection = null;
-        try{
-            Class.forName(dbDriver);
-            connection = DriverManager.getConnection(URL,name,password);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-        return connection;
-    }
 }
